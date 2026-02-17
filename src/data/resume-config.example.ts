@@ -20,8 +20,8 @@ export const resumeConfig: ResumeConfig = {
       fr: 'Développeuse Fullstack',
     },
     subtitle: {
-      en: '5 years of experience',
-      fr: '5 ans d\'expérience',
+      en: '6 years of experience',
+      fr: '6 ans d\'expérience',
     },
     location: 'Paris, France',
   },
