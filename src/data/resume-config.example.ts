@@ -139,8 +139,8 @@ export const resumeConfig: ResumeConfig = {
       id: 'concentrix',
       company: { fr: 'Concentrix', en: 'Concentrix' },
       role: { fr: 'Advisor I, Service Client', en: 'Advisor I, Customer Service' },
-      type: { fr: 'CDI', en: 'Permanent' },
-      period: { fr: 'Nov. 2025 - Présent', en: 'Nov. 2025 - Present' },
+      type: { fr: 'CDD', en: 'Fixed-term' },
+      period: { fr: 'Nov. 2025 - Mars 2026', en: 'Nov. 2025 - March 2026' },
       description: {
         fr: 'Conseiller clientèle en centre de contact hybride à Prague, répondant aux demandes clients par téléphone et email.',
         en: 'Customer advisor in a hybrid contact center in Prague, handling requests via phone and email.',
