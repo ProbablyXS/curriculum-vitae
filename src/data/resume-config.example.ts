@@ -1,106 +1,134 @@
 import type { ResumeConfig } from './types'
 
-/**
- * This is an example configuration file.
- * Copy this file to `resume-config.ts` and fill in your own information.
- *
- * All text fields that support multiple languages use the `LocalizedString` format:
- * { en: "English text", fr: "Texte français" }
- *
- * Add as many languages as you need — just make sure to list them in `languages.available`.
- */
 export const resumeConfig: ResumeConfig = {
   // ===== PERSONAL INFO =====
   personal: {
-    name: 'Jane Doe',
-    photo: '/images/photo.jpg', // Place your photo in public/images/
-    photoBackEmoji: '👩‍💻', // Shown when clicking the photo (3D flip)
+    name: 'Corantin Berger',
+    photo: '/images/photo.jpg',
+    photoBackEmoji: '💻',
     title: {
       en: 'Fullstack Developer',
-      fr: 'Développeuse Fullstack',
+      fr: 'Développeur Fullstack',
     },
     subtitle: {
-      en: '6 years of experience',
-      fr: '6 ans d\'expérience',
+      en: 'Web, Desktop & Systems Development',
+      fr: 'Développement Web, Desktop & Systèmes',
     },
-    location: 'Paris, France',
+    location: 'Ceske Budejovice, Tchéquie',
   },
 
-  // ===== SEO (used in <head> meta tags) =====
+  // ===== SEO =====
   seo: {
-    title: 'Jane Doe — Fullstack Developer',
-    description: 'Interactive resume of Jane Doe, Fullstack Developer specializing in React and TypeScript.',
+    title: 'Corantin Berger — Développeur Fullstack',
+    description: 'CV interactif de Corantin Berger, Développeur Fullstack, formateur web et développeur desktop/systèmes.',
   },
 
   // ===== LANGUAGES =====
   languages: {
-    default: 'en',
-    available: ['en', 'fr'],
+    default: 'fr',
+    available: ['fr', 'en'],
     labels: {
-      en: 'EN',
       fr: 'FR',
+      en: 'EN',
     },
   },
 
   // ===== CONTACT =====
   contact: [
-    { type: 'github', label: 'janedoe', href: 'https://github.com/janedoe' },
-    { type: 'linkedin', label: 'Jane Doe', href: 'https://linkedin.com/in/janedoe' },
-    { type: 'email', label: 'jane@example.com' },
-    { type: 'phone', label: '+33 6 12 34 56 78' },
-    { type: 'location', label: 'Paris, France' },
+    { type: 'github', label: 'ProbablyXS', href: 'https://github.com/ProbablyXS' },
+    { type: 'linkedin', label: 'Corantin Berger', href: 'https://www.linkedin.com/in/corantin-berger/' },
+    { type: 'email', label: 'corantin.berger@hotmail.com' },
+    { type: 'phone', label: '07 85 21 95 02' },
+    { type: 'location', label: 'Ceske Budejovice, Tchéquie' },
   ],
 
   // ===== SKILLS =====
   skills: [
     {
-      title: { en: 'Languages', fr: 'Langues' },
+      title: { fr: 'Langues', en: 'Languages' },
       type: 'languages',
       items: [
-        { name: { en: 'French', fr: 'Français' }, level: { en: 'Native', fr: 'Natif' } },
-        { name: { en: 'English', fr: 'Anglais' }, level: { en: 'Professional', fr: 'Professionnel' }, details: 'TOEIC 910' },
+        { name: { fr: 'Français', en: 'French' }, level: { fr: 'Natif', en: 'Native' } },
+        { name: { fr: 'Anglais', en: 'English' }, level: { fr: 'Professionnel', en: 'Professional' } },
       ],
     },
     {
-      title: { en: 'Frontend', fr: 'Frontend' },
+      title: { fr: 'Web Frontend', en: 'Web Frontend' },
       type: 'badges',
       items: [
+        { name: 'HTML5' },
+        { name: 'CSS3' },
+        { name: 'JavaScript' },
+        { name: 'Bootstrap' },
         { name: 'React' },
-        { name: 'TypeScript' },
-        { name: 'Angular' },
+        { name: 'Twig' },
+        { name: 'Bash' },
       ],
     },
     {
-      title: { en: 'Backend', fr: 'Backend' },
+      title: { fr: 'Web Backend', en: 'Web Backend' },
       type: 'badges',
       items: [
+        { name: 'PHP' },
         { name: 'Node.js' },
+        { name: 'Symfony' },
+        { name: 'Apache' },
+      ],
+    },
+    {
+      title: { fr: 'Desktop & Systèmes', en: 'Desktop & Systems' },
+      type: 'badges',
+      items: [
+        { name: 'C#' },
+        { name: '.NET / WinForms' },
+        { name: 'WPF' },
+        { name: 'Visual Basic .NET' },
+        { name: 'C++' },
         { name: 'Python' },
+        { name: 'Shell' },
+        { name: 'Xamarin' },
       ],
     },
     {
-      title: { en: 'Database', fr: 'Base de données' },
+      title: { fr: 'CMS', en: 'CMS' },
       type: 'badges',
       items: [
-        { name: 'PostgreSQL' },
+        { name: 'WordPress' },
+        { name: 'Joomla' },
+        { name: 'Drupal' },
+        { name: 'Shopify' },
+        { name: 'PrestaShop' },
+      ],
+    },
+    {
+      title: { fr: 'Bases de données', en: 'Databases' },
+      type: 'badges',
+      items: [
         { name: 'MongoDB' },
+        { name: 'MariaDB' },
+        { name: 'SQLite' },
+        { name: 'phpMyAdmin' },
       ],
     },
     {
-      title: { en: 'DevOps', fr: 'DevOps' },
+      title: { fr: 'Outils', en: 'Tools' },
       type: 'badges',
       items: [
-        { name: 'Docker' },
-        { name: 'Kubernetes' },
-        { name: 'AWS' },
-        { name: 'GitHub Actions' },
+        { name: 'VS Code' },
+        { name: 'Visual Studio' },
+        { name: 'Notepad++' },
+        { name: 'Git / GitHub' },
+        { name: 'Figma' },
+        { name: 'Photoshop' },
+        { name: 'Illustrator' },
+        { name: 'PuTTY' },
       ],
     },
     {
-      title: { en: 'Methodologies', fr: 'Méthodologies' },
+      title: { fr: 'Autres', en: 'Other' },
       type: 'text',
       items: [
-        { name: { en: 'Agile/Scrum, TDD, Code Review, CI/CD', fr: 'Agile/Scrum, TDD, Code Review, CI/CD' } },
+        { name: { fr: 'Réseaux TCP/IP, réparation informatique, UX/UI, WebRTC, Puppeteer, Tampermonkey', en: 'TCP/IP networks, IT repair, UX/UI, WebRTC, Puppeteer, Tampermonkey' } },
       ],
     },
   ],
@@ -108,259 +136,528 @@ export const resumeConfig: ResumeConfig = {
   // ===== PROFESSIONAL EXPERIENCES =====
   experiences: [
     {
-      id: 'company-a',
-      company: { en: 'TechCorp', fr: 'TechCorp' },
-      role: { en: 'Senior Fullstack Developer', fr: 'Développeuse Fullstack Senior' },
-      type: { en: 'Permanent', fr: 'CDI' },
-      period: { en: '2022 - Present', fr: '2022 - Présent' },
+      id: 'concentrix',
+      company: { fr: 'Concentrix', en: 'Concentrix' },
+      role: { fr: 'Advisor I, Service Client', en: 'Advisor I, Customer Service' },
+      type: { fr: 'CDI', en: 'Permanent' },
+      period: { fr: 'Nov. 2025 - Présent', en: 'Nov. 2025 - Present' },
       description: {
-        en: 'Led the development of a SaaS platform used by 10k+ users. Built microservices architecture and modern React frontend.',
-        fr: 'Direction du développement d\'une plateforme SaaS utilisée par 10k+ utilisateurs. Architecture microservices et frontend React moderne.',
+        fr: 'Conseiller clientèle en centre de contact hybride à Prague, répondant aux demandes clients par téléphone et email.',
+        en: 'Customer advisor in a hybrid contact center in Prague, handling requests via phone and email.',
       },
-      techs: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'AWS'],
+      techs: [],
       isHighlighted: true,
       details: {
-        context: {
-          en: 'Team of 8 developers within a 50-person product company. Agile/Scrum methodology with 2-week sprints, CI/CD pipeline with GitHub Actions, code reviews on every PR.',
-          fr: 'Équipe de 8 développeurs au sein d\'une société produit de 50 personnes. Méthodologie Agile/Scrum avec sprints de 2 semaines, pipeline CI/CD avec GitHub Actions, code review sur chaque PR.',
-        },
+        context: { fr: 'Prague, Tchéquie – mode hybride.', en: 'Prague, Czech Republic – hybrid mode.' },
         tasks: {
-          en: [
-            'Designed and implemented the frontend architecture (monorepo, shared component library)',
-            'Built a real-time notification system using WebSockets and Redis pub/sub',
-            'Migrated legacy codebase from JavaScript to TypeScript (200+ files)',
-            'Implemented role-based access control (RBAC) across the entire platform',
-            'Set up automated testing with 85% code coverage (unit, integration, E2E)',
-            'Led the migration from REST to GraphQL for the main API',
-            'Built a dashboard analytics module with interactive charts and export features',
-            'Mentored 3 junior developers through pair programming and weekly 1-on-1s',
-          ],
           fr: [
-            'Conception et implémentation de l\'architecture frontend (monorepo, bibliothèque de composants partagés)',
-            'Création d\'un système de notifications temps réel via WebSockets et Redis pub/sub',
-            'Migration du code legacy de JavaScript vers TypeScript (200+ fichiers)',
-            'Implémentation d\'un contrôle d\'accès basé sur les rôles (RBAC) sur toute la plateforme',
-            'Mise en place de tests automatisés avec 85% de couverture (unitaires, intégration, E2E)',
-            'Pilotage de la migration de REST vers GraphQL pour l\'API principale',
-            'Développement d\'un module de tableau de bord analytique avec graphiques interactifs et export',
-            'Mentorat de 3 développeurs juniors via pair programming et 1-on-1 hebdomadaires',
+            'Répondre aux demandes des clients par téléphone et par email',
+            'Résoudre les problématiques clients dans le respect des procédures',
+            'Maintenir un haut niveau de qualité de service',
           ],
-        },
-        training: {
           en: [
-            'AWS Solutions Architect certification',
-            'Internal training on Kubernetes orchestration',
-          ],
-          fr: [
-            'Certification AWS Solutions Architect',
-            'Formation interne sur l\'orchestration Kubernetes',
+            'Handling customer requests via phone and email',
+            'Resolving customer issues following internal procedures',
+            'Maintaining high service quality standards',
           ],
         },
-        env: {
-          en: 'React / TypeScript / Node.js / PostgreSQL / GraphQL / Redis / Docker / AWS / GitHub Actions / Datadog',
-          fr: 'React / TypeScript / Node.js / PostgreSQL / GraphQL / Redis / Docker / AWS / GitHub Actions / Datadog',
-        },
+        env: { fr: 'Support client / Contact center / Hybride', en: 'Customer support / Contact center / Hybrid' },
       },
     },
     {
-      id: 'company-b',
-      company: { en: 'WebAgency', fr: 'WebAgency' },
-      role: { en: 'Frontend Developer', fr: 'Développeuse Frontend' },
-      type: { en: 'Permanent', fr: 'CDI' },
-      period: { en: '2019 - 2022', fr: '2019 - 2022' },
+      id: 'mooveus',
+      company: { fr: 'Moovéus (AKSIS)', en: 'Moovéus (AKSIS)' },
+      role: { fr: 'Formateur – Création et gestion de site internet', en: 'Trainer – Web design & management' },
+      type: { fr: 'CDD', en: 'Fixed-term' },
+      period: { fr: 'Mai 2025 - Juin 2025', en: 'May 2025 - Jun. 2025' },
       description: {
-        en: 'Developed responsive web applications for various clients. Specialized in React and Angular projects.',
-        fr: 'Développement d\'applications web responsives pour divers clients. Spécialisée en projets React et Angular.',
+        fr: 'Accompagnement de publics variés dans l\'apprentissage des fondamentaux du web, de la conception à la mise en ligne.',
+        en: 'Guiding diverse audiences through web fundamentals, from design to deployment.',
       },
-      techs: ['React', 'Angular', 'TypeScript', 'SCSS'],
+      techs: ['HTML', 'CSS', 'JavaScript', 'WordPress', 'Joomla'],
+      isHighlighted: true,
       details: {
-        context: {
-          en: 'Digital agency with 20+ clients across various industries (retail, finance, healthcare). Team of 12 developers, working on 3-4 projects simultaneously.',
-          fr: 'Agence digitale avec 20+ clients dans différents secteurs (retail, finance, santé). Équipe de 12 développeurs, travaillant sur 3-4 projets simultanément.',
-        },
+        context: { fr: 'AKSIS-MOOVEUS – Brignoles, France.', en: 'AKSIS-MOOVEUS – Brignoles, France.' },
         tasks: {
-          en: [
-            'Built 15+ client-facing web applications from scratch',
-            'Created and maintained a shared design system used across all agency projects',
-            'Implemented complex form workflows with multi-step validation',
-            'Optimized web performance achieving 90+ scores on Core Web Vitals',
-            'Integrated third-party APIs (payment, CRM, analytics)',
-            'Set up Storybook documentation for reusable components',
-            'Collaborated closely with UX designers to translate Figma mockups into pixel-perfect UIs',
-          ],
           fr: [
-            'Développement de 15+ applications web clients from scratch',
-            'Création et maintenance d\'un design system partagé utilisé sur tous les projets de l\'agence',
-            'Implémentation de workflows de formulaires complexes avec validation multi-étapes',
-            'Optimisation des performances web avec scores 90+ sur les Core Web Vitals',
-            'Intégration d\'APIs tierces (paiement, CRM, analytics)',
-            'Mise en place de la documentation Storybook pour les composants réutilisables',
-            'Collaboration étroite avec les designers UX pour traduire les maquettes Figma en interfaces pixel-perfect',
+            'Élaboration et animation de modules sur HTML, CSS, JavaScript, WordPress, Joomla et bonnes pratiques UX/UI',
+            'Suivi individualisé des apprenants pour favoriser leur autonomie et montée en compétences',
+            'Ateliers pratiques orientés projet avec évaluation continue et feedback structuré',
+            'Veille technologique et adaptation des contenus aux évolutions du secteur numérique',
           ],
-        },
-        training: {
           en: [
-            'Angular Advanced workshop (2 days)',
-            'Accessibility (WCAG 2.1) certification',
-          ],
-          fr: [
-            'Workshop Angular Avancé (2 jours)',
-            'Certification Accessibilité (WCAG 2.1)',
+            'Designing and delivering modules on HTML, CSS, JavaScript, WordPress, Joomla and UX/UI best practices',
+            'Individual learner follow-up to support autonomy and skill development',
+            'Hands-on project workshops with continuous assessment and structured feedback',
+            'Technology watch and content updates to match digital sector evolutions',
           ],
         },
-        env: {
-          en: 'React / Angular / TypeScript / SCSS / Tailwind CSS / Storybook / Figma / GitLab CI',
-          fr: 'React / Angular / TypeScript / SCSS / Tailwind CSS / Storybook / Figma / GitLab CI',
-        },
+        env: { fr: 'HTML / CSS / JavaScript / WordPress / Joomla / UX/UI', en: 'HTML / CSS / JavaScript / WordPress / Joomla / UX/UI' },
       },
     },
     {
-      id: 'internship',
-      company: { en: 'StartupXYZ', fr: 'StartupXYZ' },
-      role: { en: 'Fullstack Developer Intern', fr: 'Stagiaire Développeuse Fullstack' },
-      type: { en: 'Internship', fr: 'Stage' },
-      period: { en: '2018 - 2019', fr: '2018 - 2019' },
+      id: 'redstack',
+      company: { fr: 'RedStack-Dev', en: 'RedStack-Dev' },
+      role: { fr: 'Développeur Full Stack', en: 'Full Stack Developer' },
+      type: { fr: 'Freelance / Projet', en: 'Freelance / Project' },
+      period: { fr: 'Oct. 2023 - Juin 2024', en: 'Oct. 2023 - Jun. 2024' },
       description: {
-        en: 'Contributed to the development of an e-commerce platform. Gained experience in fullstack development.',
-        fr: 'Contribution au développement d\'une plateforme e-commerce. Acquisition d\'expérience en développement fullstack.',
+        fr: 'Développement fullstack (9 mois) dans un contexte projet.',
+        en: 'Fullstack development (9 months) in a project context.',
       },
-      techs: ['React', 'Node.js', 'MongoDB', 'Machine Learning'],
+      techs: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'PHP'],
       details: {
-        context: {
-          en: 'Early-stage startup (seed round), small team of 5 developers building an e-commerce platform from the ground up. Fast-paced environment with weekly releases.',
-          fr: 'Startup en phase de démarrage (seed round), petite équipe de 5 développeurs construisant une plateforme e-commerce from scratch. Environnement rapide avec des releases hebdomadaires.',
-        },
+        context: { fr: 'Mission de développement fullstack sur 9 mois.', en: '9-month fullstack development mission.' },
         tasks: {
-          en: [
-            'Developed the product catalog with advanced filtering and search',
-            'Built the shopping cart with real-time inventory checking',
-            'Integrated Stripe payment gateway with 3D Secure support',
-            'Implemented user authentication with JWT and OAuth (Google, Facebook)',
-            'Created an admin dashboard for order management and analytics',
-            'Wrote API documentation with Swagger/OpenAPI',
-          ],
-          fr: [
-            'Développement du catalogue produits avec filtrage avancé et recherche',
-            'Création du panier d\'achat avec vérification de stock en temps réel',
-            'Intégration de la passerelle de paiement Stripe avec support 3D Secure',
-            'Implémentation de l\'authentification utilisateur avec JWT et OAuth (Google, Facebook)',
-            'Création d\'un tableau de bord admin pour la gestion des commandes et les analytics',
-            'Rédaction de la documentation API avec Swagger/OpenAPI',
-          ],
+          fr: ['Développement et maintenance d\'applications web fullstack'],
+          en: ['Development and maintenance of fullstack web applications'],
         },
-        env: {
-          en: 'React / Node.js / Express / MongoDB / Stripe / JWT / Docker / Heroku',
-          fr: 'React / Node.js / Express / MongoDB / Stripe / JWT / Docker / Heroku',
+        env: { fr: 'HTML / CSS / JavaScript / Node.js / PHP', en: 'HTML / CSS / JavaScript / Node.js / PHP' },
+      },
+    },
+    {
+      id: 'courtoise',
+      company: { fr: 'La Courtoise – Ressourcerie', en: 'La Courtoise – Ressourcerie' },
+      role: { fr: 'Agent de récupération et réparation', en: 'Recovery & Repair Agent' },
+      type: { fr: 'Emploi', en: 'Employment' },
+      period: { fr: 'Déc. 2024 - Avr. 2025', en: 'Dec. 2024 - Apr. 2025' },
+      description: {
+        fr: 'Récupération, tri et réparation d\'objets et équipements dans une ressourcerie à Brignoles.',
+        en: 'Recovery, sorting and repair of items and equipment in a reuse store in Brignoles.',
+      },
+      techs: [],
+      details: {
+        context: { fr: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.', en: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.' },
+        tasks: {
+          fr: ['Récupération et tri d\'objets', 'Réparation et remise en état du matériel', 'Valorisation et mise en vente des articles'],
+          en: ['Recovery and sorting of items', 'Repair and refurbishment of equipment', 'Valuation and resale of articles'],
         },
+        env: { fr: '', en: '' },
+      },
+    },
+    {
+      id: 'cinema',
+      company: { fr: 'Brignoles Liberté Cinéma', en: 'Brignoles Liberté Cinéma' },
+      role: { fr: 'Vendeur caissier', en: 'Sales Cashier' },
+      type: { fr: 'CDD', en: 'Fixed-term' },
+      period: { fr: 'Nov. 2024 - Déc. 2024', en: 'Nov. 2024 - Dec. 2024' },
+      description: {
+        fr: 'Vente de billets et de produits en caisse dans un cinéma.',
+        en: 'Ticket and product sales at the cash register in a cinema.',
+      },
+      techs: [],
+      details: {
+        context: { fr: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.', en: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.' },
+        tasks: {
+          fr: ['Vente et encaissement', 'Accueil et orientation des clients', 'Gestion de la caisse'],
+          en: ['Sales and cash handling', 'Customer welcome and guidance', 'Cash register management'],
+        },
+        env: { fr: '', en: '' },
+      },
+    },
+    {
+      id: 'sweet-saveur',
+      company: { fr: 'Sweet Saveur', en: 'Sweet Saveur' },
+      role: { fr: 'Vendeur caissier', en: 'Sales Cashier' },
+      type: { fr: 'CDD', en: 'Fixed-term' },
+      period: { fr: 'Juin 2024 - Juil. 2024', en: 'Jun. 2024 - Jul. 2024' },
+      description: {
+        fr: 'Vente et encaissement dans un commerce alimentaire.',
+        en: 'Sales and cash handling in a food retail store.',
+      },
+      techs: [],
+      details: {
+        context: { fr: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.', en: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.' },
+        tasks: {
+          fr: ['Accueil et conseil client', 'Vente et encaissement', 'Mise en rayon'],
+          en: ['Customer welcome and advice', 'Sales and cash handling', 'Shelf stocking'],
+        },
+        env: { fr: '', en: '' },
+      },
+    },
+    {
+      id: 'mcdo',
+      company: { fr: 'McDonald\'s', en: 'McDonald\'s' },
+      role: { fr: 'Équipier Polyvalent', en: 'Crew Member' },
+      type: { fr: 'CDI', en: 'Permanent' },
+      period: { fr: 'Déc. 2019 - Sep. 2022', en: 'Dec. 2019 - Sep. 2022' },
+      description: {
+        fr: 'Poste polyvalent en restauration rapide sur 2 ans et 10 mois à Brignoles.',
+        en: 'Versatile position in fast food for nearly 3 years in Brignoles.',
+      },
+      techs: [],
+      details: {
+        context: { fr: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.', en: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.' },
+        tasks: {
+          fr: ['Accueil et service client', 'Préparation des commandes', 'Respect des normes d\'hygiène et de sécurité alimentaire'],
+          en: ['Customer welcome and service', 'Order preparation', 'Compliance with hygiene and food safety standards'],
+        },
+        env: { fr: '', en: '' },
+      },
+    },
+    {
+      id: 'micromania',
+      company: { fr: 'Micromania', en: 'Micromania' },
+      role: { fr: 'Vendeur', en: 'Sales Associate' },
+      type: { fr: 'CDD', en: 'Fixed-term' },
+      period: { fr: 'Nov. 2019 - Nov. 2019', en: 'Nov. 2019' },
+      description: {
+        fr: 'Vente de jeux vidéo et de matériel gaming.',
+        en: 'Sales of video games and gaming equipment.',
+      },
+      techs: [],
+      details: {
+        context: { fr: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.', en: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.' },
+        tasks: {
+          fr: ['Conseil et vente client', 'Gestion des stocks et de la caisse'],
+          en: ['Customer advice and sales', 'Stock and cash register management'],
+        },
+        env: { fr: '', en: '' },
+      },
+    },
+    {
+      id: 'leclerc',
+      company: { fr: 'E.Leclerc', en: 'E.Leclerc' },
+      role: { fr: 'Employé de mise en rayon / Drive', en: 'Shelf Stacker / Drive' },
+      type: { fr: 'CDD', en: 'Fixed-term' },
+      period: { fr: 'Déc. 2018 - Sep. 2019', en: 'Dec. 2018 - Sep. 2019' },
+      description: {
+        fr: 'Mise en rayon et préparation de commandes drive à Marignane.',
+        en: 'Shelf stocking and drive order preparation in Marignane.',
+      },
+      techs: [],
+      details: {
+        context: { fr: 'Marignane, Provence-Alpes-Côte d\'Azur, France.', en: 'Marignane, Provence-Alpes-Côte d\'Azur, France.' },
+        tasks: {
+          fr: ['Mise en rayon des produits', 'Préparation des commandes drive', 'Gestion des stocks'],
+          en: ['Shelf stocking', 'Drive order preparation', 'Stock management'],
+        },
+        env: { fr: '', en: '' },
+      },
+    },
+    {
+      id: 'carrefour',
+      company: { fr: 'Carrefour', en: 'Carrefour' },
+      role: { fr: 'Employé de mise en rayon', en: 'Shelf Stacker' },
+      type: { fr: 'CDD', en: 'Fixed-term' },
+      period: { fr: 'Août 2018 - Oct. 2018', en: 'Aug. 2018 - Oct. 2018' },
+      description: {
+        fr: 'Mise en rayon dans un hypermarché à Châteauneuf-les-Martigues.',
+        en: 'Shelf stocking in a hypermarket in Châteauneuf-les-Martigues.',
+      },
+      techs: [],
+      details: {
+        context: { fr: 'Châteauneuf-les-Martigues, Provence-Alpes-Côte d\'Azur, France.', en: 'Châteauneuf-les-Martigues, Provence-Alpes-Côte d\'Azur, France.' },
+        tasks: {
+          fr: ['Mise en rayon des produits', 'Gestion et rotation des stocks'],
+          en: ['Shelf stocking', 'Stock management and rotation'],
+        },
+        env: { fr: '', en: '' },
+      },
+    },
+    {
+      id: 'microtech',
+      company: { fr: 'MICROTECH', en: 'MICROTECH' },
+      role: { fr: 'Réparation informatique et réseau télécom', en: 'IT & telecom network repair' },
+      type: { fr: 'Stage', en: 'Internship' },
+      period: { fr: 'Jan. 2018 - Fév. 2018', en: 'Jan. 2018 - Feb. 2018' },
+      description: { fr: 'Réparation informatique et interventions réseau télécom.', en: 'IT repair and telecom network interventions.' },
+      techs: ['Réseaux', 'Matériel informatique'],
+      details: {
+        context: { fr: 'Stage en réparation informatique.', en: 'IT repair internship.' },
+        tasks: {
+          fr: ['Diagnostic et réparation de matériel informatique', 'Interventions sur réseau télécom'],
+          en: ['Hardware diagnosis and repair', 'Telecom network interventions'],
+        },
+        env: { fr: 'Matériel informatique / Réseaux télécom', en: 'Hardware / Telecom networks' },
+      },
+    },
+    {
+      id: 'megachip',
+      company: { fr: 'MEGACHIP', en: 'MEGACHIP' },
+      role: { fr: 'Réparation, montage et vente informatique', en: 'IT repair, assembly & sales' },
+      type: { fr: 'Stage', en: 'Internship' },
+      period: { fr: 'Mai 2017 - Juin 2017', en: 'May 2017 - Jun. 2017' },
+      description: { fr: 'Réparation, montage et vente de matériel informatique à Manosque.', en: 'IT repair, assembly and sales in Manosque.' },
+      techs: ['Matériel informatique'],
+      details: {
+        context: { fr: 'Manosque, France.', en: 'Manosque, France.' },
+        tasks: {
+          fr: ['Réparation et montage de PC', 'Conseil et vente client'],
+          en: ['PC repair and assembly', 'Customer advice and sales'],
+        },
+        env: { fr: 'Matériel informatique', en: 'Hardware' },
+      },
+    },
+    {
+      id: 'uiisc7',
+      company: { fr: 'UIISC7', en: 'UIISC7' },
+      role: { fr: 'Réparation & sécurité réseau intranet/intra-défense', en: 'Intranet/defense network repair & security' },
+      type: { fr: 'Stage', en: 'Internship' },
+      period: { fr: 'Avr. 2017 - Mai 2017', en: 'Apr. 2017 - May 2017' },
+      description: { fr: 'Réparation et sécurité sur réseau intranet et intra-défense à Brignoles.', en: 'IT repair and security on intranet and defense network in Brignoles.' },
+      techs: ['Réseaux', 'Sécurité informatique'],
+      details: {
+        context: { fr: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.', en: 'Brignoles, Provence-Alpes-Côte d\'Azur, France.' },
+        tasks: {
+          fr: ['Maintenance et réparation sur réseau intranet défense', 'Application des règles de sécurité réseau'],
+          en: ['Maintenance and repair on defense intranet network', 'Applying network security rules'],
+        },
+        env: { fr: 'Réseaux / Sécurité / Intranet défense', en: 'Networks / Security / Defense intranet' },
       },
     },
   ],
 
-  // ===== PROJECTS (optional) =====
+  // ===== PROJECTS (GitHub) =====
   projects: [
     {
-      id: 'project-a',
-      title: { en: 'WeatherApp', fr: 'WeatherApp' },
+      id: 'rtss-headset-wpf',
+      title: { fr: 'RTSS Headset Battery Info (WPF)', en: 'RTSS Headset Battery Info (WPF)' },
       description: {
-        en: 'A real-time weather dashboard built with React and OpenWeather API.',
-        fr: 'Un tableau de bord météo en temps réel construit avec React et l\'API OpenWeather.',
+        fr: 'Affiche le niveau de batterie d\'un casque gaming sans fil directement dans l\'OSD de RivaTuner Statistics Server, version WPF.',
+        en: 'Displays wireless gaming headset battery level directly in the RivaTuner Statistics Server OSD, WPF version.',
       },
-      techs: ['React', 'TypeScript'],
-      url: 'https://weather-app.example.com',
-      github: 'https://github.com/janedoe/weather-app',
+      techs: ['C#', 'WPF', '.NET'],
+      github: 'https://github.com/ProbablyXS/RTSSHeadsetBatteryInfoWpf',
     },
     {
-      id: 'project-b',
-      title: { en: 'TaskManager', fr: 'TaskManager' },
+      id: 'rtss-headset',
+      title: { fr: 'RTSS Headset Battery Info', en: 'RTSS Headset Battery Info' },
       description: {
-        en: 'A Kanban-style task management tool with drag-and-drop.',
-        fr: 'Un outil de gestion de tâches style Kanban avec glisser-déposer.',
+        fr: 'Plugin affichant le niveau de batterie d\'un casque gaming sans fil dans l\'OSD RTSS via headsetcontrol.',
+        en: 'Plugin displaying wireless gaming headset battery level in the RTSS OSD using headsetcontrol.',
       },
-      techs: ['React', 'Node.js', 'PostgreSQL'],
-      github: 'https://github.com/janedoe/task-manager',
+      techs: ['C#', '.NET'],
+      github: 'https://github.com/ProbablyXS/RTSSHeadsetBatteryInfo',
+    },
+    {
+      id: 'backscene',
+      title: { fr: 'BackScene', en: 'BackScene' },
+      description: {
+        fr: 'Application Windows pour définir des fonds d\'écran vidéo animés via MPV et weebp. ⭐ 5 étoiles.',
+        en: 'Windows app to set animated video wallpapers using MPV and weebp. ⭐ 5 stars.',
+      },
+      techs: ['C#', '.NET', 'WinForms'],
+      github: 'https://github.com/ProbablyXS/BackScene',
+    },
+    {
+      id: 'bettersoundmeeter',
+      title: { fr: 'BetterSoundMeeter', en: 'BetterSoundMeeter' },
+      description: {
+        fr: 'Soundboard enrichissant Voicemeeter : effets sonores personnalisables, contrôle de volume par app et intégration MacroButton.',
+        en: 'Soundboard enhancing Voicemeeter with custom sound effects, per-app volume control and MacroButton integration.',
+      },
+      techs: ['C#', '.NET', 'API Windows'],
+      github: 'https://github.com/ProbablyXS/BetterSoundMeeter',
+    },
+    {
+      id: 'cputrayapp',
+      title: { fr: 'CpuTrayApp', en: 'CpuTrayApp' },
+      description: {
+        fr: 'App légère en zone de notification pour gérer les plans d\'alimentation et limiter l\'utilisation CPU en temps réel.',
+        en: 'Lightweight system tray app to manage power plans and limit CPU usage in real time.',
+      },
+      techs: ['C#', '.NET', 'WinForms'],
+      github: 'https://github.com/ProbablyXS/CpuTrayApp',
+    },
+    {
+      id: 'razer-kiyo',
+      title: { fr: 'Razer Kiyo Pro Firmware Fix', en: 'Razer Kiyo Pro Firmware Fix' },
+      description: {
+        fr: 'Solution pour corriger les problèmes de mise à jour firmware de la Razer Kiyo Pro. ⭐ 8 étoiles.',
+        en: 'Solution to fix firmware update issues for the Razer Kiyo Pro webcam. ⭐ 8 stars.',
+      },
+      techs: ['C#'],
+      github: 'https://github.com/ProbablyXS/razer-kiyo-pro-firmware-updater-fix',
+    },
+    {
+      id: 'webrtc-screenshare',
+      title: { fr: 'WebRTC ScreenShare', en: 'WebRTC ScreenShare' },
+      description: {
+        fr: 'Partage d\'écran et streaming vidéo en temps réel avec chat, contrôle audio et gestion à distance.',
+        en: 'Real-time screen sharing and video streaming with chat, audio control and remote management.',
+      },
+      techs: ['JavaScript', 'WebRTC', 'Node.js'],
+      github: 'https://github.com/ProbablyXS/webrtc-screenshare',
+    },
+    {
+      id: 'liveboxpanelmanager',
+      title: { fr: 'LiveboxPanelManager', en: 'LiveboxPanelManager' },
+      description: {
+        fr: 'Réinterprétation de l\'interface Livebox : plus rapide, plus ergonomique, avec plus d\'options.',
+        en: 'Reimagined Livebox interface: faster, more ergonomic, with more options.',
+      },
+      techs: ['C#', 'WinForms'],
+      github: 'https://github.com/ProbablyXS/LiveboxPanelManager',
+    },
+    {
+      id: 'plutoniumspoofer',
+      title: { fr: 'PlutoniumSpoofer', en: 'PlutoniumSpoofer' },
+      description: {
+        fr: 'Spoofer pour le client Plutonium (Call of Duty modifié). ⭐ 7 étoiles.',
+        en: 'Spoofer for the Plutonium client (modded Call of Duty). ⭐ 7 stars.',
+      },
+      techs: ['Visual Basic .NET'],
+      github: 'https://github.com/ProbablyXS/PlutoniumSpoofer',
+    },
+    {
+      id: 'chat-online',
+      title: { fr: 'Chat Online (Client & Serveur)', en: 'Online Chat (Client & Server)' },
+      description: {
+        fr: 'Application de chat en réseau composée d\'un client et d\'un serveur TCP.',
+        en: 'Networked chat application with a TCP client and server.',
+      },
+      techs: ['Visual Basic .NET', 'TCP'],
+      github: 'https://github.com/ProbablyXS/ClientChatOnline',
+    },
+    {
+      id: 'auto-video-downloader',
+      title: { fr: 'Auto Video Downloader TS Merge', en: 'Auto Video Downloader TS Merge' },
+      description: {
+        fr: 'Userscript interceptant les requêtes XHR pour télécharger et fusionner des segments .ts en fichier .mp4.',
+        en: 'Userscript intercepting XHR requests to download and merge .ts segments into a single .mp4.',
+      },
+      techs: ['JavaScript', 'Tampermonkey'],
+      github: 'https://github.com/ProbablyXS/auto-video-downloader-ts-merge',
+    },
+    {
+      id: 'symfony-website',
+      title: { fr: 'Site Web Symfony', en: 'Symfony Website' },
+      description: {
+        fr: 'Projet de site web développé avec Symfony et le moteur de templates Twig.',
+        en: 'Website project built with Symfony and the Twig templating engine.',
+      },
+      techs: ['PHP', 'Symfony', 'Twig'],
+      github: 'https://github.com/ProbablyXS/symfony-website',
+    },
+    {
+      id: 'steam-wallpaper',
+      title: { fr: 'Steam Wallpaper Downloader', en: 'Steam Wallpaper Downloader' },
+      description: {
+        fr: 'Outil Puppeteer pour télécharger automatiquement les fonds d\'écran et vidéos du Steam Points Shop.',
+        en: 'Puppeteer tool to automatically download wallpapers and videos from the Steam Points Shop.',
+      },
+      techs: ['JavaScript', 'Node.js', 'Puppeteer'],
+      github: 'https://github.com/ProbablyXS/steam-wallpaper-downloader',
+    },
+    {
+      id: 'keyboard-sharing',
+      title: { fr: 'KeyboardSharing', en: 'KeyboardSharing' },
+      description: {
+        fr: 'Application capturant les entrées clavier et les transmettant via TCP à un serveur distant.',
+        en: 'Application capturing keyboard inputs and sending them over TCP to a remote server.',
+      },
+      techs: ['C#', 'TCP'],
+      github: 'https://github.com/ProbablyXS/KeyboardSharing',
+    },
+    {
+      id: 'vme-remover',
+      title: { fr: 'VME-Remover', en: 'VME-Remover' },
+      description: {
+        fr: 'Outil pour supprimer le message d\'évaluation de VoiceMeeter. ⭐ 10 étoiles.',
+        en: 'Tool to remove the VoiceMeeter evaluation popup. ⭐ 10 stars.',
+      },
+      techs: ['Visual Basic .NET'],
+      github: 'https://github.com/ProbablyXS/VME-Remover',
+    },
+    {
+      id: 'vecr-bo2',
+      title: { fr: 'VECR Project – BO2 UI', en: 'VECR Project – BO2 UI' },
+      description: {
+        fr: 'Interface menu personnalisée pour la version Plutonium de Black Ops 2.',
+        en: 'Custom menu interface for the Plutonium version of Black Ops 2.',
+      },
+      techs: ['JavaScript'],
+      github: 'https://github.com/ProbablyXS/vecr-project-new-ui-bo2',
+    },
+    {
+      id: 'dietemenbon',
+      title: { fr: 'DieteMenBon', en: 'DieteMenBon' },
+      description: {
+        fr: 'Application web pour les diététiciens permettant d\'ajouter et gérer les dossiers patients.',
+        en: 'Web application for dietitians to add and manage patient records.',
+      },
+      techs: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+      github: 'https://github.com/ProbablyXS/DieteMenBon',
+    },
+    {
+      id: 'atypik-home',
+      title: { fr: 'Atypik Home', en: 'Atypik Home' },
+      description: {
+        fr: 'Site web conçu et développé pour Atypik Home (projet concept).',
+        en: 'Website designed and developed for Atypik Home (concept project).',
+      },
+      techs: ['HTML', 'CSS', 'JavaScript'],
+      url: 'https://github.com/ProbablyXS/Atypik-Home',
+      github: 'https://github.com/ProbablyXS/Atypik-Home',
     },
   ],
 
   // ===== EDUCATION =====
   education: [
     {
-      school: { en: 'University of Paris', fr: 'Université de Paris' },
-      degree: { en: 'Master in Computer Science', fr: 'Master Informatique' },
-      specialty: { en: 'Web & Mobile Development', fr: 'Développement Web & Mobile' },
-      period: '2017 - 2019',
+      school: { fr: 'Icademie – Toulon', en: 'Icademie – Toulon' },
+      degree: { fr: 'Bachelor Développeur Multimédia – Niveau 6 RNCP34569', en: "Bachelor's Degree in Multimedia Development – Level 6 RNCP34569" },
+      specialty: { fr: 'Formation à distance', en: 'Distance learning' },
+      period: '2023',
     },
     {
-      school: { en: 'University of Paris', fr: 'Université de Paris' },
-      degree: { en: 'Bachelor in Computer Science', fr: 'Licence Informatique' },
-      period: '2014 - 2017',
+      school: { fr: 'Lycée Thomas Edison – Lorgues', en: 'Lycée Thomas Edison – Lorgues' },
+      degree: { fr: 'Baccalauréat Professionnel SEN (Systèmes Électroniques et Numériques)', en: 'Vocational Baccalaureate – Electronic and Digital Systems (SEN)' },
+      period: '2018',
+    },
+    {
+      school: { fr: 'Lycée Thomas Edison – Lorgues', en: 'Lycée Thomas Edison – Lorgues' },
+      degree: { fr: 'CAP SEN (Systèmes Électroniques et Numériques)', en: 'Vocational Studies Certificate – Electronic and Digital Systems (SEN)' },
+      period: '2017',
     },
   ],
 
-  // ===== HOBBIES (optional) =====
+  // ===== CERTIFICATIONS =====
   hobbies: [
     {
-      title: { en: 'Photography', fr: 'Photographie' },
+      title: { fr: 'Certifications', en: 'Certifications' },
       details: [
-        { en: 'Street photography', fr: 'Photo de rue' },
-        { en: '5 years', fr: '5 ans' },
-      ],
-    },
-    {
-      title: { en: 'Hiking', fr: 'Randonnée' },
-      details: [
-        { en: 'Mountain trails', fr: 'Sentiers de montagne' },
-      ],
-    },
-    {
-      title: { en: 'Open Source', fr: 'Open Source' },
-    },
-    {
-      title: { en: 'Guitar', fr: 'Guitare' },
-      details: [
-        { en: '3 years', fr: '3 ans' },
+        { fr: 'L\'essentiel du HTML5', en: 'HTML5 Essentials' },
+        { fr: 'L\'essentiel des CSS', en: 'CSS Essentials' },
+        { fr: 'Créer des formulaires avec HTML et CSS', en: 'Create forms with HTML & CSS' },
+        { fr: 'Gestion de projet : La conduite de projets', en: 'Project Management Fundamentals' },
       ],
     },
   ],
 
-  // ===== PDF (optional — place your PDF in public/cv/) =====
-  // Use a string for the same PDF in all languages,
-  // or a LocalizedString for one PDF per language (button is hidden if no PDF for the current language).
+  // ===== PDF =====
   pdf: {
-    label: { en: 'Download PDF', fr: 'Télécharger le PDF' },
-    path: { en: '/cv/resume-en.pdf', fr: '/cv/resume-fr.pdf' },
+    label: { fr: 'Télécharger le PDF', en: 'Download PDF' },
+    path: { fr: '/cv/resume-fr.pdf', en: '/cv/resume-en.pdf' },
   },
 
   // ===== THEME =====
   theme: {
-    preset: 'warm', // 'minimal' | 'warm' | 'ocean' | 'forest' | 'slate' | 'lilac'
-    // You can override individual colors:
-    // colors: {
-    //   primary: '#8B5A2B',
-    //   primaryLight: '#D4A574',
-    // },
+    preset: 'ocean',
   },
 
   // ===== UI LABELS =====
   labels: {
     sections: {
-      contact: { en: 'CONTACT', fr: 'CONTACT' },
-      skills: { en: 'SKILLS', fr: 'COMPÉTENCES' },
-      experience: { en: 'PROFESSIONAL EXPERIENCE', fr: 'EXPÉRIENCES PROFESSIONNELLES' },
-      education: { en: 'EDUCATION', fr: 'FORMATION' },
-      projects: { en: 'PROJECTS', fr: 'PROJETS' },
-      hobbies: { en: 'HOBBIES', fr: 'LOISIRS' },
+      contact: { fr: 'CONTACT', en: 'CONTACT' },
+      skills: { fr: 'COMPÉTENCES', en: 'SKILLS' },
+      experience: { fr: 'EXPÉRIENCES PROFESSIONNELLES', en: 'PROFESSIONAL EXPERIENCE' },
+      education: { fr: 'FORMATION', en: 'EDUCATION' },
+      projects: { fr: 'PROJETS', en: 'PROJECTS' },
+      hobbies: { fr: 'CERTIFICATIONS', en: 'CERTIFICATIONS' },
     },
     experience: {
-      mainTasks: { en: 'Main tasks:', fr: 'Tâches principales :' },
-      moreTasks: { en: 'more tasks...', fr: 'autres tâches...' },
-      training: { en: 'Training:', fr: 'Formations :' },
-      techEnv: { en: 'Tech environment:', fr: 'Env. technique :' },
-      technologies: { en: 'Technologies', fr: 'Technologies' },
+      mainTasks: { fr: 'Tâches principales :', en: 'Main tasks:' },
+      moreTasks: { fr: 'autres tâches...', en: 'more tasks...' },
+      training: { fr: 'Formations :', en: 'Training:' },
+      techEnv: { fr: 'Env. technique :', en: 'Tech environment:' },
+      technologies: { fr: 'Technologies', en: 'Technologies' },
     },
     actions: {
-      clickHint: { en: 'Click on experiences to see more details', fr: 'Cliquez sur les expériences pour voir plus de détails' },
-      switchTheme: { en: 'Toggle dark mode', fr: 'Changer le thème' },
-      downloadPdf: { en: 'Download PDF', fr: 'Télécharger le PDF' },
+      clickHint: { fr: 'Cliquez sur les expériences pour voir plus de détails', en: 'Click on experiences to see more details' },
+      switchTheme: { fr: 'Changer le thème', en: 'Toggle dark mode' },
+      downloadPdf: { fr: 'Télécharger le PDF', en: 'Download PDF' },
     },
   },
 }
